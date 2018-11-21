@@ -17,11 +17,11 @@ const sh = require('shelljs')
 
 sh.config.fatal = true
 
-const configFile = path.join(__dirname, '../_config.yml')
+const configFile = path.join(__dirname, '../site/config.yml')
 
 // Array of objects which holds the files to generate SRI hashes for.
 // `file` is the path from the root folder
-// `configPropertyName` is the _config.yml variable's name of the file
+// `configPropertyName` is the config.yml variable's name of the file
 const files = [
   {
     file: 'dist/css/bootstrap.min.css',
@@ -32,7 +32,7 @@ const files = [
     configPropertyName: 'js_hash'
   },
   {
-    file: 'site/docs/4.1/assets/js/vendor/jquery-slim.min.js',
+    file: 'site/static/4.1/assets/js/vendor/jquery-slim.min.js',
     configPropertyName: 'jquery_hash'
   },
   {
